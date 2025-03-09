@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  send_welcome_message:
+    runs-on: ubuntu-latest
+    name: Send a custom welcome message
+    steps:
+      - uses: actions/checkout@v2
+      - id: welcome
+        uses: bumblebe3/test@v1
+        with:
+          name: 'Jane Doe'
